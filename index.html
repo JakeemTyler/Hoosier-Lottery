@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoosier Lottery Numbers</title>
+</head>
+<body>
+     <h1>Hoosier Lottery for this week are:</h1>
+    <h3 class="forLoop"></h3>
+    <h3 class="whileLoop"></h3>      
+    </body>
+
+    <script>
+
+        let numberStrFor;
+        let numberStr = "";
+        let lottoFor = document.querySelector(".forLoop");
+        let lotto;
+        
+        let lottoWhile = document.querySelector(".whileLoop");
+ // For
+        for (let num = 0; num < 6; num++) {
+        lottoNum = Math.floor(Math.random() * 50);
+        numberStr += " " + lottoNum.toString() + (num < 5 ? " -" : "");
+        }
+        console.log(numberStr);
+        lottoFor.textContent = numberStr;
+        let number = 0;
+        numberStr = "";
+
+        while (number < 6) {
+        lottoNum = Math.floor(Math.random() * 49) + 1;
+        numberStr += " " + lottoNum.toString() + (number < 5 ? " -" : "");
+        number++;
+        }
+        console.log(numberStr);
+        console.log(number);
+        lottoWhile.textContent = numberStr;
+</script>
+</html>
